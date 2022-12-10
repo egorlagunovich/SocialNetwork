@@ -1,0 +1,24 @@
+.navbar {
+  background-color: white;
+  margin-right: 10px;
+}
+.navList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.navbar li {
+  display: block;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+.navbar li:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.navList li:last-child {
+  margin-top: 20px;
+}
+.active {
+  color: gold;
+}

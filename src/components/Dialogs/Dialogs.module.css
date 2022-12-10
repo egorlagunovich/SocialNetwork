@@ -1,0 +1,17 @@
+.Dialogs {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  justify-content: center;
+  align-items: center;
+}
+.name {
+  margin-bottom: 30px;
+}
+.DialogsMessages {
+  margin-top: 60px;
+  border-left: 3px solid #888da8;
+  padding: 0 40px;
+}
+.active{
+  color: gold;
+}

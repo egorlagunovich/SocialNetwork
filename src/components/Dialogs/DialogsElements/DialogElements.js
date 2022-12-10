@@ -7,9 +7,15 @@ const Dialog = (props) => {
   return (
     <div>
       <NavLink to={path} className={styles.dialog}>
-        {props.name}
+        <div className={styles.dialogInfo}>
+        <div>
+          <img src={props.photo} alt="avatar" />
+        </div>
+        <div>{props.name}</div>
+        </div>
       </NavLink>
-    </div>
+      </div>
+   
   );
 };
 

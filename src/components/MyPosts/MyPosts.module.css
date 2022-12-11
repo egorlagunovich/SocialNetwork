@@ -1,0 +1,24 @@
+.myPosts {
+  text-align: center;
+}
+.newPost textarea {
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  color: #888da8;
+}
+.newPost button {
+  cursor: pointer;
+  color: #888da8;
+  border: none;
+  border-radius: 15px;
+  margin-left: 5px;
+  padding: 5px 10px;
+}
+.newPost {
+  display: flex;
+}
+.mypost {
+  border: 1px solid #888da8;
+  margin-top: 10px;
+}

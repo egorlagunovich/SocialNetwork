@@ -1,3 +1,5 @@
+import { rerender } from "../render";
+
 let state = {
   profilePage: {
     postsData: [
@@ -7,6 +9,7 @@ let state = {
       { id: 4, message: "Hello bro", likesCount: 2 },
       { id: 5, message: "Yo", likesCount: 35 },
     ],
+    newPostText: "I love you",
   },
   dialogsPage: {
     messagesData: [
@@ -63,6 +66,7 @@ let state = {
           "https://a.foxdcg.com/dpp-uploaded/images/credits/613267801b04f90020c6fabd/our_kind_of_people_lance_gross_2x.jpg?fit=inside%7C*:278 ",
       },
     ],
+    newMessageText: "Hello!",
   },
   sidebar: {
     friends: [
@@ -110,6 +114,38 @@ let state = {
       },
     ],
   },
+};
+
+export let addMessage = () => {
+  let newMessage = {
+    id: 9,
+    message: state.dialogsPage.newMessageText,
+  };
+  state.dialogsPage.messagesData.push(newMessage);
+  state.dialogsPage.newMessageText = "";
+  rerender(state);
+};
+export let updateNewMessageText = (newMessage) => {
+  state.dialogsPage.newMessageText = newMessage;
+
+  rerender(state);
+};
+
+export let addPost = () => {
+  let newPost = {
+    id: 5,
+    message: state.profilePage.newPostText,
+    likesCount: 0,
+  };
+  state.profilePage.postsData.unshift(newPost);
+  state.profilePage.newPostText = "";
+  rerender(state);
+};
+
+export let updateNewPostText = (newText) => {
+  state.profilePage.newPostText = newText;
+
+  rerender(state);
 };
 
 export default state;

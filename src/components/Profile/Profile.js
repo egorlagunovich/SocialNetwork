@@ -53,7 +53,11 @@ const Profile = (props) => {
           website="github.com/egorlagunovich"
         />
       </div>
-      <MyPosts state={props.state} />
+      <MyPosts
+        state={props.state}
+        addPosts={props.addPost}
+        updateNewPostText={props.updateNewPostText}
+      />
     </main>
   );
 };
